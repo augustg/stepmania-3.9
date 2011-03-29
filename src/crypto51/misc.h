@@ -142,7 +142,7 @@ inline unsigned int GetAlignment(T *dummy=NULL)	// VC60 workaround
 
 inline bool IsAlignedOn(const void *p, unsigned int alignment)
 {
-	return IsPowerOf2(alignment) ? ModPowerOf2((unsigned int)p, alignment) == 0 : (unsigned int)p % alignment == 0;
+	return IsPowerOf2(alignment) ? ModPowerOf2((uintptr_t)p, alignment) == 0 : (uintptr_t)p % alignment == 0;
 }
 
 template <class T>
