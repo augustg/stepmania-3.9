@@ -554,7 +554,7 @@ static void RegisterProtocols()
 	Done = true;
 
 	avcodec::av_register_all();
-	avcodec::register_protocol( &RageProtocol );
+	avcodec::av_register_protocol( &RageProtocol );
 }
 
 void MovieTexture_FFMpeg::CreateDecoder()

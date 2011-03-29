@@ -16,7 +16,11 @@ enum ScreenMessage {
 	SM_GainFocus,
 	SM_LoseFocus,
 	SM_StopMusic,
-	SM_User	= 100
+	SM_User	= 100,
+        /* GCC 4.4 does not permit enums in switch blocks to have values
+         * above the maximum defined value */
+        SM_Dummy = 100000
+
 };
 
 #endif
