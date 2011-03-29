@@ -441,9 +441,9 @@ void GetNewStorageDevices( vector<UsbStorageDevice>& vDevicesOut )
 		// Don't include a path.  The usbutils installer script installs 
 		// to /usr/local/sbin and the Debian package installs to /usr/sbin/.
 		CString sCommand = "lsusb";
-		char *szParams[] = { "lsusb", "-v", NULL }; 
+		const char *szParams[] = { "lsusb", "-v", NULL }; 
 		CString sOutput;
-		RunProgram( sCommand, szParams, sOutput );
+		RunProgram( sCommand, (char * const*)szParams, sOutput );
 		
 		CStringArray vsLines;
 		split( sOutput, "\n", vsLines );

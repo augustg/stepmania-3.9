@@ -102,9 +102,9 @@ static void NORETURN spawn_child_process( int from_parent )
 	GetExecutableName( path, sizeof(path) );
 
 	/* Use execve; it's the lowest-level of the exec calls.  The others may allocate. */
-	char *argv[3] = { path, CHILD_MAGIC_PARAMETER, NULL };
+	const char *argv[3] = { path, CHILD_MAGIC_PARAMETER, NULL };
 	char *envp[1] = { NULL };
-	execve( path, argv, envp );
+	execve( path, (char* const*)argv, envp );
 
 	/* If we got here, the exec failed.  We can't call strerror. */
 	// safe_print(fileno(stderr), "Crash handler execl(", path, ") failed: ", strerror(errno), "\n", NULL);

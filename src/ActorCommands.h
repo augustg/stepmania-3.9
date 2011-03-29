@@ -17,9 +17,9 @@ struct ParsedCommandToken
 	bool bColorIsValid;	// true if c is a valid HTML-type color
 
 	operator const CString () const		{ return s; };
-	operator const float () const		{ return f; };
-	operator const int () const			{ return i; };
-	operator const bool () const		{ return b; };
+	operator float () const		{ return f; };
+	operator int () const			{ return i; };
+	operator bool () const		{ return b; };
 	operator const RageColor () const	{ return c; };
 };
 

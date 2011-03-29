@@ -1,5 +1,5 @@
 /* XPM */
-static char *icon[] = {
+static const char *icon[] = {
 "32 32 21 1",
 /* colors */
 "  c #000000",

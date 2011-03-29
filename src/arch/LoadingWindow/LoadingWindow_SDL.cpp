@@ -29,7 +29,7 @@ LoadingWindow_SDL::LoadingWindow_SDL()
 	SDL_WM_SetCaption("Loading StepMania", "");
 
 	CString error;
-	RageSurface *srf = RageSurface_Load_XPM( icon, error );
+	RageSurface *srf = RageSurface_Load_XPM( (char* const*)icon, error );
 
 	uint32_t color;
 	if( srf->fmt.MapRGBA( 0xFF, 0, 0xFF, 0xFF, color ) )
@@ -54,7 +54,7 @@ LoadingWindow_SDL::LoadingWindow_SDL()
 
 
 	/* Load the BMP - we need its dimensions */
-    srf = RageSurface_Load_XPM( loading, error );
+    srf = RageSurface_Load_XPM( (char* const*)loading, error );
     if( srf == NULL ) // XXX SDL_GetError
         RageException::Throw( "Couldn't load loading.bmp: %s",SDL_GetError() );
 

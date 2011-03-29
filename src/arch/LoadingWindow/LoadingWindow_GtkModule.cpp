@@ -20,7 +20,7 @@ extern "C" const char *Init( int *argc, char ***argv )
 	window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
 	gtk_window_set_position( GTK_WINDOW(window), GTK_WIN_POS_CENTER );
 	gtk_widget_realize(window);
-	loadmap = gdk_pixmap_create_from_xpm_d(window->window,NULL,NULL,loading);
+	loadmap = gdk_pixmap_create_from_xpm_d(window->window,NULL,NULL,(gchar **)loading);
 	loadimage = gtk_image_new_from_pixmap(loadmap,NULL);
 	label = gtk_label_new(NULL);
 	gtk_label_set_justify(GTK_LABEL(label),GTK_JUSTIFY_CENTER);

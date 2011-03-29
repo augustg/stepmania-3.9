@@ -501,9 +501,8 @@ bool DWILoader::LoadFromDWIFile( CString sPath, Song &out )
 				BlacklistedImages.insert( sub.c_str() );
 			}
 		}
-		else
-			// do nothing.  We don't care about this value name
-			;
+		else {} // do nothing.  We don't care about this value name
+
 	}
 
 	return true;

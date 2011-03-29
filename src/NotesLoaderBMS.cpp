@@ -579,7 +579,7 @@ bool BMSLoader::LoadFromDir( CString sDir, Song &out )
 				switch( iBMSTrackNo )
 				{
 				case 1:	{ // background music track
-					float fBeatOffset = fBeatOffset = NoteRowToBeat( (float)iStepIndex );
+					float fBeatOffset = NoteRowToBeat( (float)iStepIndex );
 					if( fBeatOffset > 10 )	// some BPMs's play the music again at the end.  Why?  Who knows...
 						break;
 					float fBPS;

@@ -111,7 +111,7 @@ class CachedThemeMetricF : public CachedThemeMetric
 public:
 	void Update() { m_fValue = (float)atof( m_sValue ); }
 	CachedThemeMetricF( CString sClassName, CString sValueName ) : CachedThemeMetric( sClassName, sValueName ) {}
-    operator const float () const		{ ASSERT(m_bInited);	return m_fValue; };
+    operator float () const		{ ASSERT(m_bInited);	return m_fValue; };
 };
 
 class CachedThemeMetricI : public CachedThemeMetric
@@ -120,7 +120,7 @@ class CachedThemeMetricI : public CachedThemeMetric
 public:
 	void Update() { m_iValue = atoi( m_sValue ); }
 	CachedThemeMetricI( CString sClassName, CString sValueName ) : CachedThemeMetric( sClassName, sValueName ) {}
-	operator const int () const			{ ASSERT(m_bInited);	return m_iValue; };
+	operator int () const			{ ASSERT(m_bInited);	return m_iValue; };
 };
 
 class CachedThemeMetricB : public CachedThemeMetric
@@ -129,7 +129,7 @@ class CachedThemeMetricB : public CachedThemeMetric
 public:
 	void Update() { m_bValue = atoi( m_sValue ) != 0; }
 	CachedThemeMetricB( CString sClassName, CString sValueName ) : CachedThemeMetric( sClassName, sValueName ) {}
-    operator const bool () const		{ ASSERT(m_bInited);	return m_bValue; };
+    operator bool () const		{ ASSERT(m_bInited);	return m_bValue; };
 };
 
 		

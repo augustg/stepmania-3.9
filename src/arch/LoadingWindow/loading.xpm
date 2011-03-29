@@ -1,5 +1,5 @@
 /* XPM */
-static char *loading[] = {
+static const char *loading[] = {
 /* width height ncolors chars_per_pixel */
 "468 62 128 2",
 /* colors */
