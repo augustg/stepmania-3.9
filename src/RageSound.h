@@ -6,6 +6,7 @@
 #include "RageTimer.h"
 #include "RageUtil_CircularBuffer.h"
 #include "RageSoundPosMap.h"
+#include <cstring>
 
 class SoundReader;
 

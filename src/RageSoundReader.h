@@ -5,6 +5,8 @@
 #ifndef RAGE_SOUND_READER_H
 #define RAGE_SOUND_READER_H
 
+#include <cstring>
+
 class SoundReader
 {
 	mutable string error;

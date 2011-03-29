@@ -1,6 +1,8 @@
 #ifndef SSHSHA_H
 #define SSHSHA_H
 
+#include <cstring>
+
 typedef struct {
 	uint32_t h[5];
 	unsigned char block[64];

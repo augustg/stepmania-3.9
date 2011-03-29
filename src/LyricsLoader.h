@@ -3,6 +3,8 @@
 #ifndef LYRICS_LOADER_H
 #define LYRICS_LOADER_H
 
+#include <cstring>
+
 class Song;
 
 class LyricsLoader

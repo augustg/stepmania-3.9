@@ -6,6 +6,7 @@
 #include "GameInput.h"
 #include "MenuInput.h"
 #include "GameConstantsAndTypes.h"
+#include <cstring>
 
 
 const int MAX_STYLES_PER_GAME = 10;

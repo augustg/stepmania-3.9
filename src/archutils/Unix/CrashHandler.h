@@ -1,6 +1,8 @@
 #ifndef CRASH_HANDLER_H
 #define CRASH_HANDLER_H
 
+#include <cstring>
+
 void ForceCrashHandler( const char *reason );
 struct BacktraceContext;
 void ForceCrashHandlerDeadlock( CString reason, uint64_t CrashHandle );

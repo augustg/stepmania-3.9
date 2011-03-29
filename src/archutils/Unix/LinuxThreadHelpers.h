@@ -1,6 +1,8 @@
 #ifndef PID_THREAD_HELPERS_H
 #define PID_THREAD_HELPERS_H
 
+#include <cstring>
+
 CString ThreadsVersion();
 
 /* Get the current thread's ThreadID. */

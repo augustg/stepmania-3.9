@@ -5,6 +5,8 @@
 #ifndef RAGE_FILE_H
 #define RAGE_FILE_H
 
+#include <cstring>
+
 class RageFileObj;
 
 class RageFile

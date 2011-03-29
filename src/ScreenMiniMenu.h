@@ -8,6 +8,7 @@
 #include "Transition.h"
 #include "Quad.h"
 #include "RandomSample.h"
+#include <cstring>
 
 
 #define MAX_MENU_ROWS  40

@@ -18,6 +18,7 @@
 #include <vector>
 #include <fcntl.h>
 #include <ctype.h>
+#include <cstring>
 
 #if defined(_XBOX)
 // Summary : WinsockX is bad, XTL is good.

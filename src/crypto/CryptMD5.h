@@ -1,6 +1,8 @@
 #ifndef SSHMD5_H
 #define SSHMD5_H
 
+#include <cstring>
+
 typedef struct {
 	uint32_t h[4];
 } MD5_Core_State;

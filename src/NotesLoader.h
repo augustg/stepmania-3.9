@@ -3,6 +3,7 @@
 
 #include "RageUtil.h"
 #include <set>
+#include <cstring>
 
 class Song;
 

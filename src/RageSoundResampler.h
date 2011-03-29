@@ -1,6 +1,8 @@
 #ifndef RAGE_SOUND_RESAMPLER_H
 #define RAGE_SOUND_RESAMPLER_H
 
+#include <cstring>
+
 class RageSoundResampler
 {
 	int InputRate, OutputRate, Channels;

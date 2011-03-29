@@ -10,6 +10,7 @@
 #include "Course.h"
 #include "ScreenMessage.h"
 #include "song.h"
+#include <cstring>
 
 
 class EditCoursesSongMenu: public ActorFrame 

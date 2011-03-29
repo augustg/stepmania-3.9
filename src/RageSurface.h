@@ -3,6 +3,8 @@
 #ifndef RAGE_SURFACE_H
 #define RAGE_SURFACE_H
 
+#include <cstring>
+
 /* XXX remove? */
 struct RageSurfaceColor 
 {

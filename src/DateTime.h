@@ -2,6 +2,7 @@
 #define DATE_TIME_H
 
 #include <ctime>
+#include <cstring>
 
 const int NUM_LAST_DAYS = 7;
 const int NUM_LAST_WEEKS = 52;

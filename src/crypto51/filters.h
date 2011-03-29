@@ -7,6 +7,7 @@
 #include "smartptr.h"
 #include "queue.h"
 #include "algparam.h"
+#include <memory>
 
 NAMESPACE_BEGIN(CryptoPP)
 

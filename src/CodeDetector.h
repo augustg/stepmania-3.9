@@ -4,6 +4,7 @@
 #define CODEDETECTOR_H
 
 #include "GameInput.h"
+#include <cstring>
 
 struct CodeItem
 {

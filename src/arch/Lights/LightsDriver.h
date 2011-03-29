@@ -4,6 +4,7 @@
 #define LightsDriver_H
 
 #include "LightsManager.h"
+#include <cstring>
 
 struct LightsState;
 

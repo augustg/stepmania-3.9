@@ -7,6 +7,7 @@
 #include "GameConstantsAndTypes.h"
 #include "RadarValues.h"
 #include "DateTime.h"
+#include <cstring>
 
 struct XNode;
 

@@ -69,7 +69,7 @@ static void MoveData( int &sel, T &opt, bool ToSel )
 }
 
 template<>
-static void MoveData( int &sel, bool &opt, bool ToSel )
+void MoveData( int &sel, bool &opt, bool ToSel )
 {
 	if( ToSel )	sel = opt;
 	else		opt = !!sel;

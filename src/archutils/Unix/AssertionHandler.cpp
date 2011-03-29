@@ -4,6 +4,7 @@
 #include "archutils/Unix/EmergencyShutdown.h"
 #include <unistd.h>
 #include <assert.h>
+#include <cstring>
 
 /* We can define this symbol to catch failed assert() calls.  This is only used
  * for library code that uses assert(); internally we always use ASSERT, which

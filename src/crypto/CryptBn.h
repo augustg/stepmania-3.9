@@ -1,6 +1,8 @@
 #ifndef SSHBN_H
 #define SSHBN_H
 
+#include <cstring>
+
 #if defined __GNUC__ && defined __i386__
 typedef unsigned long BignumInt;
 typedef unsigned long long BignumDblInt;

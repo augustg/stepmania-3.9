@@ -6,6 +6,7 @@
 #define MS_MAX_NAME             32
 
 #include "RageTypes.h"
+#include <cstring>
 
 struct msTriangle
 {

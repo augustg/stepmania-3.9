@@ -1,6 +1,8 @@
 #ifndef SSH_SHA512_H
 #define SSH_SHA512_H
 
+#include <cstring>
+
 typedef struct
 {
 	unsigned long hi, lo;

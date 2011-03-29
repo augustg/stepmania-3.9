@@ -3,6 +3,7 @@
 
 #include <csignal>
 #include <ucontext.h>
+#include <cstring>
        
 class SaveSignals
 {

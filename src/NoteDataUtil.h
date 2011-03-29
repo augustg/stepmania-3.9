@@ -6,6 +6,7 @@
 #include "GameConstantsAndTypes.h"	// for RadarCategory
 #include "NoteTypes.h"
 #include "NoteData.h"
+#include <cstring>
 
 struct PlayerOptions;
 struct RadarValues;

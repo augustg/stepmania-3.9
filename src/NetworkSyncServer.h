@@ -7,6 +7,8 @@
 #include "ezsockets.h"
 #define NETMAXBUFFERSIZE 1020
 
+#include <cstring>
+
 class LanPlayer
 {
 public:

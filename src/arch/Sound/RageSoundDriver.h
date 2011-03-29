@@ -1,6 +1,8 @@
 #ifndef RAGE_SOUND_DRIVER
 #define RAGE_SOUND_DRIVER
 
+#include <cstring>
+
 class RageSoundBase;
 class RageSoundDriver
 {

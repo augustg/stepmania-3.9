@@ -4,6 +4,7 @@
 #define RAGEUTIL_H
 
 #include <map>
+#include <climits>
 
 #define SAFE_DELETE(p)       { if(p) { delete (p);     (p)=NULL; } }
 #define SAFE_DELETE_ARRAY(p) { if(p) { delete[] (p);   (p)=NULL; } }
