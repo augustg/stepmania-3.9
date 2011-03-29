@@ -139,7 +139,7 @@ static RageSurface *RageSurface_Load_PNG( RageFile *f, const char *fn, char erro
 
 	/* Expand grayscale images to the full 8 bits from 1, 2, or 4 bits/pixel */
 	if( color_type == PNG_COLOR_TYPE_GRAY && bit_depth < 8 )
-		png_set_gray_1_2_4_to_8( png );
+		png_set_expand_gray_1_2_4_to_8( png );
 
 	/* These are set for type == PALETTE. */
 	RageSurfaceColor colors[256];
