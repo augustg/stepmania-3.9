@@ -916,22 +916,22 @@ Steps* Song::GetClosestNotes( StepsType st, Difficulty dc ) const
 	if( pSteps )
 		return pSteps;
 	newDC = (Difficulty)(dc-1);
-	CLAMP( (int&)newDC, 0, NUM_DIFFICULTIES-1 );
+	ENUM_CLAMP( newDC, Difficulty(0), Difficulty(NUM_DIFFICULTIES-1) );
 	pSteps = GetStepsByDifficulty( st, newDC );
 	if( pSteps )
 		return pSteps;
 	newDC = (Difficulty)(dc+1);
-	CLAMP( (int&)newDC, 0, NUM_DIFFICULTIES-1 );
+	ENUM_CLAMP( newDC, Difficulty(0), Difficulty(NUM_DIFFICULTIES-1) );
 	pSteps = GetStepsByDifficulty( st, newDC );
 	if( pSteps )
 		return pSteps;
 	newDC = (Difficulty)(dc-2);
-	CLAMP( (int&)newDC, 0, NUM_DIFFICULTIES-1 );
+	ENUM_CLAMP( newDC, Difficulty(0), Difficulty(NUM_DIFFICULTIES-1) );
 	pSteps = GetStepsByDifficulty( st, newDC );
 	if( pSteps )
 		return pSteps;
 	newDC = (Difficulty)(dc+2);
-	CLAMP( (int&)newDC, 0, NUM_DIFFICULTIES-1 );
+	ENUM_CLAMP( newDC, Difficulty(0), Difficulty(NUM_DIFFICULTIES-1) );
 	pSteps = GetStepsByDifficulty( st, newDC );
 	return pSteps;
 }

@@ -434,9 +434,9 @@ int EzSockets::pReadData(char* data)
 	if(state == skCONNECTED || state == skLISTENING)
 		return recv(sock, data, 1024, 0);
 	
-	fromAddr_len = sizeof(sockaddr_in);
+	socklen_t sock_len = sizeof(sockaddr_in);
 	return recvfrom(sock, data, 1024, 0, (sockaddr*)&fromAddr,
-					(socklen_t*)&fromAddr_len);
+					(socklen_t*)&sock_len);
 }
 
 int EzSockets::pWriteData(const char* data, int dataSize)

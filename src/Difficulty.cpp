@@ -57,7 +57,7 @@ StringToX( CourseDifficulty );
 
 CourseDifficulty GetNextShownCourseDifficulty( CourseDifficulty cd )
 {
-	for( CourseDifficulty d=(CourseDifficulty)(cd+1); d<NUM_DIFFICULTIES; ((int&)d)++ )
+	for( CourseDifficulty d=(CourseDifficulty)(cd+1); d<NUM_DIFFICULTIES; enum_add(d, 1) )
 	{
 		if( GAMESTATE->IsCourseDifficultyShown(d) )
 			return d;

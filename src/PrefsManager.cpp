@@ -343,6 +343,7 @@ void PrefsManager::ResetToFactoryDefaults()
 
 void PrefsManager::ReadPrefsFromFile( CString sIni )
 {
+	int temp = 0;
 	IniFile ini;
 	if( !ini.ReadFile(sIni) )
 		return;
@@ -362,7 +363,8 @@ void PrefsManager::ReadPrefsFromFile( CString sIni )
 	ini.GetValue( "Options", "UseDedicatedMenuButtons",			m_bOnlyDedicatedMenuButtons );
 	ini.GetValue( "Options", "ShowStats",						m_bShowStats );
 	ini.GetValue( "Options", "ShowBanners",						m_bShowBanners );
-	ini.GetValue( "Options", "BackgroundMode",					(int&)m_BackgroundMode );
+	ini.GetValue( "Options", "BackgroundMode",					temp);//(int&)m_BackgroundMode );
+	m_BackgroundMode = (BackgroundModes)temp;
 	ini.GetValue( "Options", "NumBackgrounds",					m_iNumBackgrounds);
 	ini.GetValue( "Options", "ShowDanger",						m_bShowDanger );
 	ini.GetValue( "Options", "BGBrightness",					m_fBGBrightness );
@@ -458,10 +460,12 @@ void PrefsManager::ReadPrefsFromFile( CString sIni )
 	ini.GetValue( "Options", "TexturePreload",					m_bTexturePreload );
 	ini.GetValue( "Options", "DelayedScreenLoad",				m_bDelayedScreenLoad );
 	ini.GetValue( "Options", "DelayedModelDelete",				m_bDelayedModelDelete );
-	ini.GetValue( "Options", "BannerCache",						(int&)m_BannerCache );
+	ini.GetValue( "Options", "BannerCache",						temp); //(int&)m_BannerCache );
+	m_BannerCache = (BannerCacheMode)temp;
 	ini.GetValue( "Options", "PalettedBannerCache",				m_bPalettedBannerCache );
 	ini.GetValue( "Options", "FastLoad",						m_bFastLoad );
-	ini.GetValue( "Options", "MusicWheelUsesSections",			(int&)m_MusicWheelUsesSections );
+	ini.GetValue( "Options", "MusicWheelUsesSections",			temp); //(int&)m_MusicWheelUsesSections );
+	m_MusicWheelUsesSections = (MusicWheelUsesSections)temp;
 	ini.GetValue( "Options", "MusicWheelSwitchSpeed",			m_iMusicWheelSwitchSpeed );
 	ini.GetValue( "Options", "SoundDrivers",					m_sSoundDrivers );
 	ini.GetValue( "Options", "SoundWriteAhead",					m_iSoundWriteAhead );
@@ -475,14 +479,16 @@ void PrefsManager::ReadPrefsFromFile( CString sIni )
 	ini.GetValue( "Options", "CoinMode",						m_iCoinMode );
 	ini.GetValue( "Options", "CoinsPerCredit",					m_iCoinsPerCredit );
 	m_iCoinsPerCredit = max(m_iCoinsPerCredit, 1);
-	ini.GetValue( "Options", "Premium",							(int&)m_Premium );
+	ini.GetValue( "Options", "Premium",							temp); //(int&)m_Premium );
+	m_Premium = (Premium)temp;
 	ini.GetValue( "Options", "DelayedCreditsReconcile",			m_bDelayedCreditsReconcile );
 	ini.GetValue( "Options", "BoostAppPriority",				m_iBoostAppPriority );
 	ini.GetValue( "Options", "PickExtraStage",					m_bPickExtraStage );
 	ini.GetValue( "Options", "ComboContinuesBetweenSongs",		m_bComboContinuesBetweenSongs );
 	ini.GetValue( "Options", "LongVerSeconds",					m_fLongVerSongSeconds );
 	ini.GetValue( "Options", "MarathonVerSeconds",				m_fMarathonVerSongSeconds );
-	ini.GetValue( "Options", "ShowSongOptions",					(int&)m_ShowSongOptions );
+	ini.GetValue( "Options", "ShowSongOptions",					temp); //(int&)m_ShowSongOptions );
+	m_ShowSongOptions = (Maybe)temp;
 	ini.GetValue( "Options", "LightsStepsDifficulty",			m_sLightsStepsDifficulty );
 	ini.GetValue( "Options", "BlinkGameplayButtonLightsOnNote",	m_bBlinkGameplayButtonLightsOnNote );
 	ini.GetValue( "Options", "AllowUnacceleratedRenderer",		m_bAllowUnacceleratedRenderer );
@@ -502,14 +508,15 @@ void PrefsManager::ReadPrefsFromFile( CString sIni )
 	ini.GetValue( "Options", "AutogenGroupCourses",				m_bAutogenGroupCourses );
 	ini.GetValue( "Options", "BreakComboToGetItem",				m_bBreakComboToGetItem );
 	ini.GetValue( "Options", "LockCourseDifficulties",			m_bLockCourseDifficulties );
-	ini.GetValue( "Options", "ShowDancingCharacters",			(int&)m_ShowDancingCharacters );
-
-	ini.GetValue( "Options", "CourseSortOrder",					(int&)m_iCourseSortOrder );
+	ini.GetValue( "Options", "ShowDancingCharacters",			temp); //(int&)m_ShowDancingCharacters );
+	m_ShowDancingCharacters = (CharacterOption)temp;
+	ini.GetValue( "Options", "CourseSortOrder",					temp); //(int&)m_iCourseSortOrder );
+	m_iCourseSortOrder = (CourseSortOrders)temp;
 	ini.GetValue( "Options", "MoveRandomToEnd",					m_bMoveRandomToEnd );
 	ini.GetValue( "Options", "SubSortByNumSteps",				m_bSubSortByNumSteps );
 
-	ini.GetValue( "Options", "ScoringType",						(int&)m_iScoringType );
-
+	ini.GetValue( "Options", "ScoringType",						temp); //(int&)m_iScoringType );
+	m_iScoringType = (ScoringTypes)temp;
 	ini.GetValue( "Options", "ProgressiveLifebar",				m_iProgressiveLifebar );
 	ini.GetValue( "Options", "ProgressiveNonstopLifebar", 		m_iProgressiveNonstopLifebar );
 	ini.GetValue( "Options", "ProgressiveStageLifebar",			m_iProgressiveStageLifebar );
@@ -525,7 +532,8 @@ void PrefsManager::ReadPrefsFromFile( CString sIni )
 	ini.GetValue( "Options", "LastSeenMemory",					m_iLastSeenMemory );
 #endif
 	ini.GetValue( "Options", "CoursesToShowRanking",			m_sCoursesToShowRanking );
-	ini.GetValue( "Options", "GetRankingName",					(int&)m_iGetRankingName);
+	ini.GetValue( "Options", "GetRankingName",					temp); //(int&)m_iGetRankingName);
+	m_iGetRankingName = (GetRankingName)temp;
 	ini.GetValue( "Options", "SmoothLines",						m_bSmoothLines );
 	ini.GetValue( "Options", "GlobalOffsetSeconds",				m_fGlobalOffsetSeconds );
 	ini.GetValue( "Options", "ShowBeginnerHelper",				m_bShowBeginnerHelper );

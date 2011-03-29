@@ -108,7 +108,7 @@ public:
 		skERROR 
 	};
     struct sockaddr_in fromAddr;
-	unsigned long fromAddr_len;
+	//unsigned long fromAddr_len;
 
 	//The following possibly should be private.
 	string inBuffer;

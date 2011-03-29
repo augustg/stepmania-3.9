@@ -415,19 +415,19 @@ PaneTypes PaneDisplay::GetNext( PaneTypes current, int dir ) const
 		dir = 1;
 	}
 
-	PaneTypes ret = current;
+	int ret = (PaneTypes)current;
 	while( 1 )
 	{
 		ret = (PaneTypes) (ret + dir);
-		wrap( (int&) ret, NUM_PANES );
+		wrap( (int&)ret, NUM_PANES );
 
-		if( PaneIsValid( ret ) )
+		if( PaneIsValid( (PaneTypes)ret ) )
 			break;
 	}
 
 	LOG->Trace("pane %i", ret);
 
-	return ret;
+	return (PaneTypes)ret;
 }
 
 void PaneDisplay::Move( int dir )
