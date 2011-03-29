@@ -1087,7 +1087,7 @@ public:
 
 		while ( (nIdx=this->find(szOld, nIdx)) != MYBASE::npos )
 		{
-			replace(this->begin()+nIdx, this->begin()+nIdx+nOldLen, szRealNew);
+			MYBASE::replace(this->begin()+nIdx, this->begin()+nIdx+nOldLen, szRealNew);
 			nReplaced++;
 			nIdx += nNewLen;
 		}
