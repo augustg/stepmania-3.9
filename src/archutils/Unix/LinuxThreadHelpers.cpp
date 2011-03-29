@@ -15,7 +15,7 @@
 #include <sys/wait.h>
 #include <sys/ptrace.h>
 #include <sys/stat.h>
-#include <linux/unistd.h>
+#include <sys/syscall.h>
 #define _LINUX_PTRACE_H // hack to prevent broken linux/ptrace.h from conflicting with sys/ptrace.h
 #include <sys/user.h>
 
@@ -29,7 +29,7 @@
 
 static bool g_bUsingNPTL = false;
 
-static _syscall0(pid_t,gettid)
+#define gettid() syscall(SYS_gettid)
 
 #ifndef _CS_GNU_LIBPTHREAD_VERSION
 #define _CS_GNU_LIBPTHREAD_VERSION 3
