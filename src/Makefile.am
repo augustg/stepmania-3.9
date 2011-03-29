@@ -303,6 +303,10 @@ main_LDADD = \
 		  $(XLIBS) \
 		  $(srcdir)/libresample/libresample.a
 
+if HAVE_FFMPEG
+main_LDADD += $(FFMPEG_LIBS)
+endif
+
 stepmania_SOURCES = $(main_SOURCES)
 stepmania_LDADD = $(main_LDADD)
 
