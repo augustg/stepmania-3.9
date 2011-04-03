@@ -1,7 +1,6 @@
 src/stepmania
 src/libresample/tests/testresample
 */autom4te.cache
-*/Makefile.in
 */Makefile
 */config.cache
 */config.log
@@ -19,6 +18,5 @@ nbproject
 Makefile
 config.log
 config.status
-Makefile.in
 configure
 autom4te.cache
