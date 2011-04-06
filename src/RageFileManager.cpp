@@ -172,7 +172,7 @@ void RageFileManager::MountInitialFilesystems()
 	/* Search for a directory with "Songs" in it.  Be careful: the CWD is likely to
 	 * be ~, and it's possible that some users will have a ~/Songs/ directory that
 	 * has nothing to do with us, so check the initial directory last. */
-	CString Root = "";
+	/* CString Root = "";
 	struct stat st;
 	if( Root == "" && !stat( DirOfExecutable + "/Songs", &st ) && st.st_mode&S_IFDIR )
 		Root = DirOfExecutable;
@@ -181,7 +181,18 @@ void RageFileManager::MountInitialFilesystems()
 	if( Root == "" )
 		RageException::Throw( "Couldn't find \"Songs\"" );
 			
-	RageFileManager::Mount( "dir", Root, "" );
+	RageFileManager::Mount( "dir", Root, "" ); */
+	
+	/*
+	 * Mount a stepmania root in the home directory.
+	 * This is where custom data (songs, themes, etc) should go. 
+	 * Any files stepmania tries to modify will be written here.
+	 */
+	CString Home = CString( getenv( "HOME" ) ) + "/";
+	RageFileManager::Mount( "dir", Home + ".stepmania-3.9", "" );
+	
+	RageFileManager::Mount( "dir", DirOfExecutable, "" );
+
 #elif defined(_WINDOWS)
 	/* All Windows data goes in the directory one level above the executable. */
 	CHECKPOINT_M( ssprintf( "DOE \"%s\"", DirOfExecutable.c_str()) );
