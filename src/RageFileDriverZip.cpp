@@ -392,7 +392,7 @@ RageFileDriverZip::~RageFileDriverZip()
 
 RageFileObj *RageFileDriverZip::Open( const CString &path, int mode, RageFile &p, int &err )
 {
-	if( mode == RageFile::WRITE )
+	if( mode & RageFile::WRITE )
 	{
 		err = ERROR_WRITING_NOT_SUPPORTED;
 		return NULL;
