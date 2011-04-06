@@ -43,7 +43,7 @@ extern "C"
         img_convert(dst, dst_pix_fmt, src, pix_fmt, width, height);
 #else
         static SwsContext* context = 0;
-        context = sws_getCachedContext(context, width, height, pix_fmt, width, height, dst_pix_fmt, 0, NULL, NULL, NULL);
+        context = sws_getCachedContext(context, width, height, pix_fmt, width, height, dst_pix_fmt, SWS_BILINEAR, NULL, NULL, NULL);
         sws_scale(context, const_cast<uint8_t**>(src->data), const_cast<int*>(src->linesize), 0, height, dst->data, dst->linesize);
 #endif // HAVE_IMG_CONVERT
     }
