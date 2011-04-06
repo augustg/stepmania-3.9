@@ -299,8 +299,6 @@ void ScoreKeeperMAX2::AddScore( TapNoteScore score )
 	iScore = iScore - m_iScoreRemainder;
 	
 	ASSERT( iScore >= 0 );
-
-	printf( "score: %i\n", iScore );
 }
 
 void ScoreKeeperMAX2::HandleTapScore( TapNoteScore score )
